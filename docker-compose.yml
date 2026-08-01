@@ -20,6 +20,8 @@ services:
       DATABASE_URL: postgresql://goldy_user:goldy_password@db:5432/GoldyPetSpa
     depends_on:
       - db
+    volumes:
+      - .:/code
 
 volumes:
   postgres_data:
