@@ -1,0 +1,25 @@
+services:
+  db:
+    image: postgres:16
+    container_name: goldy_postgres
+    environment:
+      POSTGRES_USER: goldy_user
+      POSTGRES_PASSWORD: goldy_password
+      POSTGRES_DB: GoldyPetSpa
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  api:
+    build: .
+    container_name: goldy_api
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://goldy_user:goldy_password@db:5432/GoldyPetSpa
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
