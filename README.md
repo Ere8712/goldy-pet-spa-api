@@ -1,52 +1,27 @@
 # Goldy Pet Spa API
 
-API REST desarrollada con **FastAPI** para la administración de clientes y mascotas de una estética canina.
+API REST desarrollada con FastAPI para la administración de clientes y mascotas de una estética canina.
 
-## Tecnologías utilizadas
+## Requisitos
 
-* Python 3.12
-* FastAPI
-* SQLAlchemy
-* Alembic
-* PostgreSQL
-* Docker
-* Docker Compose
-* Pydantic
+* Docker Desktop
+* Git
 
-## Características
+## Instalación
 
-* API REST con FastAPI.
-* Base de datos PostgreSQL.
-* ORM mediante SQLAlchemy.
-* Migraciones con Alembic.
-* Configuración mediante variables de entorno.
-* Contenerización con Docker.
-* Documentación automática con Swagger.
+1. Clonar el repositorio.
 
-## Estructura del proyecto
-
-```text
-goldy-pet-spa-api/
-│
-├── alembic/
-├── app/
-│   ├── clientes/
-│   ├── pets/
-│   ├── database.py
-│   ├── errores.py
-│   └── main.py
-│
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-├── alembic.ini
-├── .env.example
-└── README.md
+```bash
+git clone https://github.com/Ere8712/goldy-pet-spa-api.git
 ```
 
-## Configuración
+2. Entrar a la carpeta del proyecto.
 
-Crear un archivo `.env` tomando como base `.env.example`.
+```bash
+cd goldy-pet-spa-api
+```
+
+3. Crear el archivo `.env` tomando como base el archivo `.env.example`.
 
 Ejemplo:
 
@@ -65,13 +40,13 @@ ENVIRONMENT=development
 
 ## Ejecución
 
-Construir y levantar el proyecto:
+Construir e iniciar los contenedores:
 
 ```bash
 docker compose up --build
 ```
 
-Para ejecutar en segundo plano:
+O ejecutarlos en segundo plano:
 
 ```bash
 docker compose up -d --build
@@ -79,63 +54,18 @@ docker compose up -d --build
 
 ## Documentación
 
-Una vez iniciado el proyecto, la documentación interactiva está disponible en:
+Una vez iniciado el proyecto, la documentación interactiva estará disponible en:
 
 ```
 http://localhost:8000/docs
 ```
 
-## Migraciones
-
-Crear una migración:
-
-```bash
-alembic revision --autogenerate -m "descripcion"
-```
-
-Aplicar migraciones:
-
-```bash
-alembic upgrade head
-```
-
-## Módulos implementados
-
-### Clientes
-
-CRUD completo:
-
-* Crear cliente
-* Listar clientes
-* Consultar cliente por ID
-* Actualizar cliente (PUT)
-* Actualización parcial (PATCH)
-* Eliminar cliente
-
-### Pets
-
-CRUD completo:
-
-* Crear mascota
-* Listar mascotas
-* Consultar mascota por ID
-* Actualizar mascota (PUT)
-* Actualización parcial (PATCH)
-* Eliminar mascota
-
-## Estado del proyecto
-
-**Avance práctico 1 completado.**
-
-Incluye:
+## Tecnologías utilizadas
 
 * FastAPI
 * SQLAlchemy
+* PostgreSQL
 * Alembic
-* Docker y Docker Compose
-* Variables de entorno
-* CRUD completo de Clientes
-* CRUD completo de Pets
-* Esquemas Pydantic
-* Documentación Swagger
-* Proyecto organizado por módulos
+* Docker
+* Docker Compose
+* Pydantic
