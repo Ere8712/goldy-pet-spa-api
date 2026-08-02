@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 
 from app.database import Base
 from app.clientes.modelos import Cliente
+from app.pets.modelos import Pet
 
 load_dotenv()
 
