@@ -2,8 +2,11 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 from app.errores import GoldyPetSpaException
+
 from app.clientes.rutas import router as clientes_router
 from app.pets.rutas import router as pets_router
+from app.citas.rutas import router as citas_router
+
 
 app = FastAPI(
     title="Goldy Pet Spa API",
@@ -25,6 +28,7 @@ def goldy_exception_handler(request: Request, exc: GoldyPetSpaException):
 
 app.include_router(clientes_router, prefix="/api/v1")
 app.include_router(pets_router, prefix="/api/v1")
+app.include_router(citas_router, prefix="/api/v1")
 
 
 @app.get("/")

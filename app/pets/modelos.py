@@ -24,3 +24,9 @@ class Pet(Base):
         "Cliente",
         back_populates="mascotas"
     )
+
+    citas = relationship(
+        "Cita",
+        back_populates="pet",
+        cascade="all, delete-orphan"
+    )

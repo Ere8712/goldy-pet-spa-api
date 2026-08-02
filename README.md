@@ -69,3 +69,18 @@ http://localhost:8000/docs
 * Docker
 * Docker Compose
 * Pydantic
+
+## Reglas de negocio implementadas
+
+- No se permiten citas con fechas anteriores al día actual.
+- La mascota debe existir para poder registrar una cita.
+- Una mascota no puede tener citas con menos de una hora de diferencia entre servicios.
+- Los clientes no pueden registrarse con nombres duplicados.
+
+## Funcionalidades principales
+
+- CRUD de clientes.
+- CRUD de mascotas.
+- CRUD de citas.
+- Relación entre clientes, mascotas y citas.
+- Manejo personalizado de errores.
