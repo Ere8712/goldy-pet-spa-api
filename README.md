@@ -1,6 +1,6 @@
 # Goldy Pet Spa API
 
-API REST desarrollada con FastAPI para la administración de clientes y mascotas de una estética canina.
+API REST desarrollada con FastAPI para la administración de clientes, mascotas y citas de una estética canina.
 
 ## Requisitos
 
@@ -84,3 +84,11 @@ http://localhost:8000/docs
 - CRUD de citas.
 - Relación entre clientes, mascotas y citas.
 - Manejo personalizado de errores.
+
+## Pruebas realizadas
+
+- Registro exitoso de clientes.
+- Registro exitoso de mascotas relacionadas a clientes.
+- Registro exitoso de citas.
+- Validación de clientes duplicados.
+- Validación de mascotas inexistentes al registrar citas.
